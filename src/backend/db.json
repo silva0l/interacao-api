@@ -1,0 +1,19 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Maria Silva",
+      "endereco": "Rua das Flores, 123"
+    },
+    {
+      "id": 3,
+      "nome": "Marcos Pereira da Silva",
+      "endereco": "Rua das Flores, 123"
+    },
+    {
+      "id": 4,
+      "nome": "João Figueiredo",
+      "endereco": "Rua Bartolomeu, 375"
+    }
+  ]
+}
