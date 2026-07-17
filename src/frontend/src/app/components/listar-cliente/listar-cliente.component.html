@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header">Lista de Clientes</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <td>{{ cliente.id }}</td>
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.endereco }}</td>
+            <td>
+              <button class="btn btn-primary btn-sm me-2" (click)="editar(cliente.id)">Editar</button>
+              <button class="btn btn-danger btn-sm" (click)="excluir(cliente.id)">Excluir</button>
+            </td>
+          </tr>
+          <tr *ngIf="!clientes.length">
+            <td colspan="4" class="text-center">Nenhum cliente encontrado.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

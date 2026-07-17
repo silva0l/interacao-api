@@ -1,0 +1,17 @@
+﻿body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+.snack-success {
+  background-color: #198754 !important;
+}
+
+.snack-error {
+  background-color: #dc3545 !important;
+}
