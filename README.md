@@ -1,4 +1,4 @@
-# Interação com APIs — Exemplo SENAI
+# Interação com APIs (Desenhado para o SENAI)
 
 Pequeno projeto didático para acompanhar uma aula do SENAI sobre consumo de APIs usando Node.js (backend) e Angular (frontend). O objetivo é facilitar a reprodução local pelo aluno: instalação, execução e testes básicos.
 
