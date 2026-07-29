@@ -16,8 +16,8 @@ export class CadastrarClienteComponent {
 
   cadastrar(): void {
     const cliente = { nome: this.nome, endereco: this.endereco };
-    //this.service.cadastrarCliente(cliente).subscribe(() => {
-     // this.router.navigate(['/clientes']);
-    //});
+    this.service.cadastrarCliente(cliente).subscribe(() => {
+      this.router.navigate(['/clientes']);
+    });
   }
 }
