@@ -32,11 +32,22 @@ export class ClienteService {
   }
 
   getClientes() {
-    // Aluno - Implementar a chamada HTTP GET para obter a lista de clientes
+    return this.http
+      .get<Cliente[]>(this.baseUrl)
+      .pipe(catchError((err) => this.handleError(err)));
   }
 
-  cadastrarCliente() {
-    // ALUNO - Implementar a chamada HTTP POST para cadastrar um novo cliente
+  cadastrarCliente(cliente: Omit<Cliente, 'id'>): Observable<Cliente> {
+    return this.http.post<Cliente>(this.baseUrl, cliente).pipe(
+      tap(() => this.showMessage('Cliente cadastrado com sucesso')),
+      catchError((err) => this.handleError(err))
+    );
+  }
+
+  getCliente(id: number): Observable<Cliente[]> {
+    return this.http
+      .get<Cliente[]>(`${this.baseUrl}?id=${id}`)
+      .pipe(catchError((err) => this.handleError(err)));
   }
 
   atualizarCliente(id: number, cliente: Partial<Cliente>): Observable<Cliente> {
