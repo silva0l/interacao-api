@@ -19,7 +19,7 @@ export class ListarClienteComponent implements OnInit {
   }
 
   loadClientes(): void {
-    // this.service.getClientes().subscribe((data) => (this.clientes = data));
+    this.service.getClientes().subscribe((data) => (this.clientes = data));
   }
 
   editar(id: number): void {
